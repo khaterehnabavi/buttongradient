@@ -1,0 +1,41 @@
+*,*::before,::after{
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Helvetica Neue',Arial, Helvetica, sans-serif;
+    line-height: 1.5rem;
+    font-size: 1.3em;
+}
+body{
+    margin: 0;
+    display: grid;
+    place-items: center;
+    min-height: 100dvh;
+    background: papayawhip;
+    padding: 10px;
+}
+button{
+    --button-bg:#ffff;
+    --button-border-width:5px;
+    --button-border-gradient:linear-gradient(90deg,salmon,pink,rebeccapurple);
+    --button-text-color:inherit;
+    --button-radius:20px;
+    border: var(--button-border-width) solid transparent;
+    background: linear-gradient(var(--button-bg)0%,var(--button-bg)100%)padding-box,var(--button-border-gradient)border-box;
+    color:var(--button-text-color);
+    border-radius: var(--button-radius);
+    padding: 20px 50px;
+    font-size: 28px;
+    cursor: pointer;
+    position: relative;
+    bottom: 0;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+    transition:  box-shadow 0.2s ease-out ,
+    bottom 0.2s ease-out;
+
+    &:hover,&:focus-visible{
+        box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.25);
+        bottom: 10px;
+    }
+
+}
